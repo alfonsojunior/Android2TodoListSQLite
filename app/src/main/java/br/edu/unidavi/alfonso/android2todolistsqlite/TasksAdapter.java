@@ -1,5 +1,6 @@
 package br.edu.unidavi.alfonso.android2todolistsqlite;
 
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -40,6 +41,12 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
                 listener.onClick(task);
             }
         });
+
+        if (task.isDone()) {
+            holder.title.setTextColor(Color.RED);
+        } else {
+            holder.title.setTextColor(Color.BLACK);
+        }
     }
 
     @Override

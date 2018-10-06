@@ -20,13 +20,14 @@ public class NewTaskActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_task);
 
         helper = new DatabaseHelper(this);
+        inputTask = findViewById(R.id.input_new_task);
+        inputTask.requestFocus();
 
         buttonSave = findViewById(R.id.button_save);
         buttonSave.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                inputTask = findViewById(R.id.input_new_task);
                 String value = inputTask.getText().toString();
                 if (!value.isEmpty()) {
                     helper.createTask(value);
