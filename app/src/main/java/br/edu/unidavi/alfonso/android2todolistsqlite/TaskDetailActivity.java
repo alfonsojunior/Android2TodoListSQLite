@@ -27,33 +27,31 @@ public class TaskDetailActivity extends AppCompatActivity {
                 setTitle(task.getTitle());
             }
         });
+        viewModel.success.observe(this, success -> {
+            if (Boolean.TRUE.equals(success)) {
+                finish();
+            }
+        });
         viewModel.findTaskById(id);
-
 
         //task = getIntent().getParcelableExtra("task");
         //task = TasksStore.getInstance(this).getTasksDAO().fintById(id);
         //setTitle(task.getTitle());
 
         Button buttonDelete = findViewById(R.id.button_delete);
-        buttonDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //helper.deleteTask(task);
-                //TasksStore.getInstance(getApplicationContext()).getTasksDAO().delete(task);
-                viewModel.delete(task);
-                finish();
-            }
+        buttonDelete.setOnClickListener(v -> {
+            //helper.deleteTask(task);
+            //TasksStore.getInstance(getApplicationContext()).getTasksDAO().delete(task);
+            viewModel.deleteTask(task);
+            //finish();
         });
 
         Button buttonDone = findViewById(R.id.button_done);
-        buttonDone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //helper.markTaskAsDone(task);
-                //TasksStore.getInstance(getApplicationContext()).getTasksDAO().update(new Task(task.getId(), task.getTitle(), true, task.getData()));
-                viewModel.update(new Task(task.getId(), task.getTitle(), true, task.getData()));
-                finish();
-            }
+        buttonDone.setOnClickListener(v -> {
+            //helper.markTaskAsDone(task);
+            //TasksStore.getInstance(getApplicationContext()).getTasksDAO().update(new Task(task.getId(), task.getTitle(), true, task.getData()));
+            viewModel.updateTask(new Task(task.getId(), task.getTitle(), true, task.getData()));
+            //finish();
         });
     }
 }

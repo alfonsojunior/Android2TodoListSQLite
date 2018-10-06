@@ -20,6 +20,11 @@ public class NewTaskActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_task);
 
         viewModel = ViewModelProviders.of(this).get(TasksViewModel.class);
+        viewModel.success.observe(this, success -> {
+            if (Boolean.TRUE.equals(success)) {
+                finish();
+            }
+        });
 
         //helper = new DatabaseHelper(this);
         inputTask = findViewById(R.id.input_new_task);
@@ -31,8 +36,8 @@ public class NewTaskActivity extends AppCompatActivity {
             if (!value.isEmpty()) {
                 //helper.createTask(value);
                 //TasksStore.getInstance(getApplicationContext()).getTasksDAO().insert(new Task(value, false));
-                viewModel.insert(new Task(value, false));
-                finish();
+                viewModel.saveTask(new Task(value, false));
+                //finish();
             }
         });
     }
