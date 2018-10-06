@@ -1,0 +1,5 @@
+
+lsquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(²Ú±Ž8×ƒü¶ä,
+ysquid:S1450"[Remove the "buttonCreate" field and declare it as a local variable in the relevant methods.(¶ó°…8×ƒü¶ä,
+nsquid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(Æ‡ÄÌûÿÿÿÿ8×ƒü¶ä,
+zsquid:S1450"WRemove the "taskList" field and declare it as a local variable in the relevant methods.(ÎØ¦äúÿÿÿÿ8×ƒü¶ä,
