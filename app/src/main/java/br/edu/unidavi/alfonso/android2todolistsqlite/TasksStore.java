@@ -22,7 +22,7 @@ public abstract class TasksStore extends RoomDatabase {
             instance = Room.databaseBuilder(context,
                     TasksStore.class,
                     "Tasks.db")
-                    .allowMainThreadQueries() // Executar sem ser async
+                    //.allowMainThreadQueries() // Executar sem ser async
                     //.fallbackToDestructiveMigration() // Usado para destruir o banco e recriar
                     .addMigrations(Migrations.FROM_1_TO_2)
                     .build();
