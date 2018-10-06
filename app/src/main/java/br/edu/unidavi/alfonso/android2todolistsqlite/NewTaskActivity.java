@@ -12,14 +12,14 @@ public class NewTaskActivity extends AppCompatActivity {
 
     private Button buttonSave = null;
     private EditText inputTask = null;
-    private DatabaseHelper helper;
+    //private DatabaseHelper helper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_task);
 
-        helper = new DatabaseHelper(this);
+        //helper = new DatabaseHelper(this);
         inputTask = findViewById(R.id.input_new_task);
         inputTask.requestFocus();
 
@@ -30,7 +30,8 @@ public class NewTaskActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String value = inputTask.getText().toString();
                 if (!value.isEmpty()) {
-                    helper.createTask(value);
+                    //helper.createTask(value);
+                    TasksStore.getInstance(getApplicationContext()).getTasksDAO().insert(new Task(value, false));
                     finish();
                 }
             }

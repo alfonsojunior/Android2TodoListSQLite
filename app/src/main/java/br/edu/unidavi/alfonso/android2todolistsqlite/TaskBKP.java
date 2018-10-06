@@ -3,33 +3,33 @@ package br.edu.unidavi.alfonso.android2todolistsqlite;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Task implements Parcelable {
+public class TaskBKP implements Parcelable {
 
     private final int id;
     private final String title;
     private final boolean done;
 
-    public Task(int id, String title, boolean done) {
+    public TaskBKP(int id, String title, boolean done) {
         this.id = id;
         this.title = title;
         this.done = done;
     }
 
-    protected Task(Parcel in) {
+    protected TaskBKP(Parcel in) {
         id = in.readInt();
         title = in.readString();
         done = in.readByte() != 0;
     }
 
-    public static final Creator<Task> CREATOR = new Creator<Task>() {
+    public static final Creator<TaskBKP> CREATOR = new Creator<TaskBKP>() {
         @Override
-        public Task createFromParcel(Parcel in) {
-            return new Task(in);
+        public TaskBKP createFromParcel(Parcel in) {
+            return new TaskBKP(in);
         }
 
         @Override
-        public Task[] newArray(int size) {
-            return new Task[size];
+        public TaskBKP[] newArray(int size) {
+            return new TaskBKP[size];
         }
     };
 
