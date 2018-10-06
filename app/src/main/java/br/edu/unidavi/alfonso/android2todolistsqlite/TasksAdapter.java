@@ -12,7 +12,12 @@ import java.util.List;
 
 public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> {
 
+    private final OnTaskClickListener listener;
     private List<Task> tasks = new ArrayList<>();
+
+    public TasksAdapter(OnTaskClickListener listener) {
+        this.listener = listener;
+    }
 
     @NonNull
     @Override
@@ -27,7 +32,14 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        final Task task = tasks.get(position);
         holder.title.setText(tasks.get(position).getTitle());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onClick(task);
+            }
+        });
     }
 
     @Override
@@ -49,5 +61,9 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
             super(itemView);
             title = itemView.findViewById(android.R.id.text1);
         }
+    }
+
+    interface OnTaskClickListener {
+        void onClick(Task task);
     }
 }

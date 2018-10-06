@@ -17,7 +17,18 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView taskList = null;
     private FloatingActionButton buttonCreate = null;
-    private TasksAdapter adapter = new TasksAdapter();
+    private TasksAdapter adapter = new TasksAdapter(new TasksAdapter.OnTaskClickListener() {
+        @Override
+        public void onClick(Task task) {
+//            Toast.makeText(
+//                    getApplicationContext(),
+//                    task.getTitle(),
+//                    Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), TaskDetailActivity.class);
+            intent.putExtra("task", task);
+            startActivity(intent);
+        }
+    });
     private DatabaseHelper helper;
 
     @Override
