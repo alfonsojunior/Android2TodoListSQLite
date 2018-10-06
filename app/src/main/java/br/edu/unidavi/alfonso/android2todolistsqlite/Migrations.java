@@ -9,7 +9,7 @@ public class Migrations {
     public static final Migration FROM_1_TO_2 = new Migration(1,2) {
         @Override
         public void migrate(@NonNull SupportSQLiteDatabase database) {
-            database.execSQL("ALTER TABLE tasks ADD COLUMN data long default 0");
+            database.execSQL("ALTER TABLE tasks ADD COLUMN data INTEGER default 0");
         }
     };
 }
