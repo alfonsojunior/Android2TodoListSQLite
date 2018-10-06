@@ -1,3 +1,6 @@
 
-|squid:S1450"YRemove the "buttonSave" field and declare it as a local variable in the relevant methods.(áıÿÿÿÿ8úÖÑµä,
-lsquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(Ê·ÿÿ8¸ÈÍµä,
+zsquid:S1450"YRemove the "buttonSave" field and declare it as a local variable in the relevant methods.(áıÿÿÿÿ8—’Îä,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(×±ï˜8—’Îä,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ØÄ®ôÿÿÿÿÿ8—’Îä,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(†­‡Ïüÿÿÿÿ8—’Îä,
+jsquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(Ê·ÿÿ8—’Îä,

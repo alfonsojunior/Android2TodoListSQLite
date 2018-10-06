@@ -17,3 +17,22 @@ Qapp/src/main/java/br/edu/unidavi/alfonso/android2todolistsqlite/MainActivity.ja
 Qapp/src/main/java/br/edu/unidavi/alfonso/android2todolistsqlite/TasksAdapter.java,0\7\07de936630e1a7fd19ac5c9ddeb011e2c73568dc
 ˆ
 Xapp/src/main/java/br/edu/unidavi/alfonso/android2todolistsqlite/data/DatabaseHelper.java,8\b\8bafe991ac6f817f364a08a089da060c90b832f9
+S
+#app/src/main/res/values/strings.xml,d\2\d2281fbb3027de2722081a53408dd77628bf080e
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+`
+0app/src/main/res/layout/activity_task_detail.xml,e\c\ec8f219654774dec30efba750af6522cc5ab19cd
+|
+Lapp/src/main/java/br/edu/unidavi/alfonso/android2todolistsqlite/TaskBKP.java,2\1\218dfb1c4e8bca5983b9a9dac4b1aaed96d781af
+}
+Mapp/src/main/java/br/edu/unidavi/alfonso/android2todolistsqlite/TasksDAO.java,4\4\4466644aea11e24329be6abbfc4caf88e6af47d7
+‚
+Rapp/src/main/java/br/edu/unidavi/alfonso/android2todolistsqlite/DateConverter.java,2\4\24fb3447509e29035cf182da225faf63f752a2e9
+‡
+Wapp/src/main/java/br/edu/unidavi/alfonso/android2todolistsqlite/TaskDetailActivity.java,3\8\38c452fe308f3be2b79cf432485765abe12a0c66
+
+Oapp/src/main/java/br/edu/unidavi/alfonso/android2todolistsqlite/TasksStore.java,c\0\c04ba4ac79371094561be1eabba2678c225e2809

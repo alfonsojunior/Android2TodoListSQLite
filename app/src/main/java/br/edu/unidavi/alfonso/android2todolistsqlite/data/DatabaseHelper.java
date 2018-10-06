@@ -51,15 +51,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cursor.moveToFirst();
         List<Task> tasks = new ArrayList<>();
 
-        while (!cursor.isAfterLast()) {
-            Task task = new Task(
-                    cursor.getInt(cursor.getColumnIndex("_id")),
-                    cursor.getString(cursor.getColumnIndex("title")),
-                    cursor.getInt(cursor.getColumnIndex("done")) == 1
-            );
-            tasks.add(task);
-            cursor.moveToNext();
-        }
+//        while (!cursor.isAfterLast()) {
+//            Task task = new Task(
+//                    cursor.getInt(cursor.getColumnIndex("_id")),
+//                    cursor.getString(cursor.getColumnIndex("title")),
+//                    cursor.getInt(cursor.getColumnIndex("done")) == 1,
+//                    data);
+//            tasks.add(task);
+//            cursor.moveToNext();
+//        }
         cursor.close();
         return tasks;
     }

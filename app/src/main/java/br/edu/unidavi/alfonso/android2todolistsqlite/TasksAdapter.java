@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +17,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
 
     private final OnTaskClickListener listener;
     private List<Task> tasks = new ArrayList<>();
+    private DateFormat format = new SimpleDateFormat("dd MMM yyyy, hh:mm");
 
     public TasksAdapter(OnTaskClickListener listener) {
         this.listener = listener;
@@ -25,7 +28,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         return new ViewHolder(inflater.inflate(
-                    android.R.layout.simple_list_item_1,
+                    android.R.layout.simple_list_item_2,
                     parent,
                     false
             ));
@@ -34,7 +37,8 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Task task = tasks.get(position);
-        holder.title.setText(tasks.get(position).getTitle());
+        holder.title.setText(task.getTitle());
+        holder.date.setText(format.format(task.getData()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,10 +67,12 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
     class  ViewHolder extends RecyclerView.ViewHolder {
 
         TextView title;
+        TextView date;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(android.R.id.text1);
+            date = itemView.findViewById(android.R.id.text2);
         }
     }
 

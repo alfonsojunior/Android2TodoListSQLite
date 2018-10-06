@@ -1,3 +1,5 @@
 
-¤squid:S1186$"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯¢ç´üÿÿÿÿ8÷§À·ä,
-dsquid:S1192)"FDefine a constant instead of duplicating this literal "title" 3 times.(˜õÍ¯8÷§À·ä,
+¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯¢ç´üÿÿÿÿ8…üÊÎä,
+gsquid:S1192"FDefine a constant instead of duplicating this literal "tasks" 4 times.(ý´»¶øÿÿÿÿ8…üÊÎä,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(üå‡¹ûÿÿÿÿ8·ØÍÎä,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÂûÐÎùÿÿÿÿ8·ØÍÎä,

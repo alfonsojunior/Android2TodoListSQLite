@@ -6,8 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import br.edu.unidavi.alfonso.android2todolistsqlite.data.DatabaseHelper;
-
 public class NewTaskActivity extends AppCompatActivity {
 
     private Button buttonSave = null;
@@ -24,16 +22,12 @@ public class NewTaskActivity extends AppCompatActivity {
         inputTask.requestFocus();
 
         buttonSave = findViewById(R.id.button_save);
-        buttonSave.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String value = inputTask.getText().toString();
-                if (!value.isEmpty()) {
-                    //helper.createTask(value);
-                    TasksStore.getInstance(getApplicationContext()).getTasksDAO().insert(new Task(value, false));
-                    finish();
-                }
+        buttonSave.setOnClickListener(v -> {
+            String value = inputTask.getText().toString();
+            if (!value.isEmpty()) {
+                //helper.createTask(value);
+                TasksStore.getInstance(getApplicationContext()).getTasksDAO().insert(new Task(value, false));
+                finish();
             }
         });
     }

@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import br.edu.unidavi.alfonso.android2todolistsqlite.data.DatabaseHelper;
-
 public class TaskDetailActivity extends AppCompatActivity {
 
     private Task task;
@@ -39,7 +37,7 @@ public class TaskDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //helper.markTaskAsDone(task);
-                TasksStore.getInstance(getApplicationContext()).getTasksDAO().update(new Task(task.getId(), task.getTitle(), true));
+                TasksStore.getInstance(getApplicationContext()).getTasksDAO().update(new Task(task.getId(), task.getTitle(), true, task.getData()));
                 finish();
             }
         });
